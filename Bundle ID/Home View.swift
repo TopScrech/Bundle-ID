@@ -6,7 +6,13 @@ struct HomeView: View {
             AppList()
                 .tag(1)
                 .tabItem {
-                    Label("", systemImage: "")
+                    Label("App Store", systemImage: "hammer")
+                }
+            
+            StarredApps()
+                .tag(2)
+                .tabItem {
+                    Label("Favorite", systemImage: "star")
                 }
         }
     }

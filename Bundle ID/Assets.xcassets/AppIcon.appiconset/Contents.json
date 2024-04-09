@@ -1,13 +1,13 @@
 {
   "images" : [
     {
-      "filename" : "1 (1).png",
+      "filename" : "Bundle Id.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
     },
     {
-      "filename" : "1 (1) 1.png",
+      "filename" : "Bundle Id 1.png",
       "idiom" : "universal",
       "platform" : "watchos",
       "size" : "1024x1024"

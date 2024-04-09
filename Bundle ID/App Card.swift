@@ -10,37 +10,58 @@ struct AppCard: View {
     let cache = NSCache<NSURL, UIImage>()
     
     @State private var uiImage: UIImage?
-        
+    @State private var skOverlay = false
+    
     var body: some View {
-        HStack {
-            if let uiImage {
-                Image(uiImage: uiImage)
-                    .resizable()
-                    .frame(width: 64, height: 64)
-                    .clipShape(.rect(cornerRadius: 16))
-            } else {
-                ProgressView()
-                    .frame(width: 64, height: 64)
+        Button {
+            skOverlay = true
+        } label: {
+            HStack {
+                if let uiImage {
+                    Image(uiImage: uiImage)
+                        .resizable()
+                        .frame(width: 64, height: 64)
+                        .clipShape(.rect(cornerRadius: 16))
+                } else {
+                    ProgressView()
+                        .frame(width: 64, height: 64)
+                }
+                
+                VStack(alignment: .leading) {
+                    Text(app.artistName)
+                        .caption(.bold)
+                    
+                    Text(app.trackName)
+                        .rounded()
+                    
+                    Text(app.bundleID)
+                        .caption()
+                        .foregroundStyle(.secondary)
+                        .monospaced()
+                }
+            }
+            .foregroundStyle(.foreground)
+        }
+        .appStoreOverlay($skOverlay, id: app.trackId)
+        .contextMenu {
+            Button {
+                skOverlay = true
+            } label: {
+                Label("Get", systemImage: "plus.app")
             }
             
-            VStack(alignment: .leading) {
-                Text(app.artistName)
-                    .caption(.bold)
-                
-                Text(app.trackName)
-                    .rounded()
-                
-                Text(app.bundleID)
-                    .caption()
-                    .foregroundStyle(.secondary)
-                    .monospaced()
-            }
-        }
-        .contextMenu {
+            Divider()
+            
             Button {
                 UIPasteboard.general.string = app.bundleID
             } label: {
                 Label("Copy Bundle ID", systemImage: "doc.on.doc")
+            }
+            
+            Button {
+                UIPasteboard.general.string = String(app.trackId)
+            } label: {
+                Label("Copy App ID", systemImage: "doc.on.doc")
             }
             
             Link(destination: URL(string: app.trackViewUrl)!) {

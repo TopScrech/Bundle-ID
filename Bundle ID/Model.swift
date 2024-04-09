@@ -19,7 +19,7 @@ struct Result: Codable {
     //    //    let currentVersionReleaseDate: Date  // MARK: Doesnt work
     //    let releaseNotes: String
     let bundleID: String
-    //    let trackID: Int
+        let trackId: Int
     let trackName: String
     //    let description: String
     //    let isVppDeviceBasedLicensingEnabled: Bool
@@ -58,7 +58,7 @@ struct Result: Codable {
         //        //        case currentVersionReleaseDate
         //        case releaseNotes
         case bundleID = "bundleId"
-        //        case trackID = "trackId"
+                case trackId
         case trackName
         //        case description, isVppDeviceBasedLicensingEnabled
         //        case sellerName
