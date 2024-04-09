@@ -64,9 +64,13 @@ struct AppCard: View {
                 Label("Copy App ID", systemImage: "doc.on.doc")
             }
             
+            Divider()
+            
             Link(destination: URL(string: app.trackViewUrl)!) {
                 Label("App Store", systemImage: "link")
             }
+            
+            ShareLink(item: app.trackViewUrl)
         }
         .task {
             // cache.name = app.bundleID

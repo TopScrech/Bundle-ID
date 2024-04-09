@@ -1,0 +1,54 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "All Countries" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Все Регионы"
+          }
+        }
+      }
+    },
+    "App Store" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
+    },
+    "Copy App ID" : {
+
+    },
+    "Copy Bundle ID" : {
+
+    },
+    "Country" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Регион"
+          }
+        }
+      }
+    },
+    "Default" : {
+
+    },
+    "Favorite" : {
+
+    },
+    "Get" : {
+
+    },
+    "Name" : {
+
+    }
+  },
+  "version" : "1.0"
+}
