@@ -28,6 +28,7 @@
 
     },
     "Country" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ru" : {
           "stringUnit" : {
@@ -47,6 +48,9 @@
 
     },
     "Name" : {
+
+    },
+    "Region" : {
 
     }
   },

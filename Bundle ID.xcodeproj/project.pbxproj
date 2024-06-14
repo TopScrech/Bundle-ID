@@ -16,7 +16,7 @@
 		F3E5932B2BB79F5000CE4FE4 /* Nav Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E5932A2BB79F5000CE4FE4 /* Nav Container.swift */; };
 		F3E5932D2BB79F7000CE4FE4 /* App List.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E5932C2BB79F7000CE4FE4 /* App List.swift */; };
 		F3E5932F2BB79FBA00CE4FE4 /* VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E5932E2BB79FBA00CE4FE4 /* VM.swift */; };
-		F3E593312BB7A0B400CE4FE4 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E593302BB7A0B400CE4FE4 /* Country.swift */; };
+		F3E593312BB7A0B400CE4FE4 /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E593302BB7A0B400CE4FE4 /* Region.swift */; };
 		F3E593332BB7A46600CE4FE4 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E593322BB7A46600CE4FE4 /* Model.swift */; };
 		F3E593382BB8045F00CE4FE4 /* App Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E593372BB8045F00CE4FE4 /* App Card.swift */; };
 /* End PBXBuildFile section */
@@ -33,7 +33,7 @@
 		F3E5932A2BB79F5000CE4FE4 /* Nav Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Nav Container.swift"; sourceTree = "<group>"; };
 		F3E5932C2BB79F7000CE4FE4 /* App List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App List.swift"; sourceTree = "<group>"; };
 		F3E5932E2BB79FBA00CE4FE4 /* VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM.swift; sourceTree = "<group>"; };
-		F3E593302BB7A0B400CE4FE4 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		F3E593302BB7A0B400CE4FE4 /* Region.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
 		F3E593322BB7A46600CE4FE4 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		F3E593372BB8045F00CE4FE4 /* App Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App Card.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,7 +89,7 @@
 				F3E5932E2BB79FBA00CE4FE4 /* VM.swift */,
 				F3E593372BB8045F00CE4FE4 /* App Card.swift */,
 				F3E593322BB7A46600CE4FE4 /* Model.swift */,
-				F3E593302BB7A0B400CE4FE4 /* Country.swift */,
+				F3E593302BB7A0B400CE4FE4 /* Region.swift */,
 			);
 			path = "Bundle ID";
 			sourceTree = "<group>";
@@ -174,7 +174,7 @@
 				F3E593382BB8045F00CE4FE4 /* App Card.swift in Sources */,
 				F3E5932F2BB79FBA00CE4FE4 /* VM.swift in Sources */,
 				F3E5932B2BB79F5000CE4FE4 /* Nav Container.swift in Sources */,
-				F3E593312BB7A0B400CE4FE4 /* Country.swift in Sources */,
+				F3E593312BB7A0B400CE4FE4 /* Region.swift in Sources */,
 				F3E5931A2BB79EC300CE4FE4 /* Bundle ID App.swift in Sources */,
 				F3B5407F2BC355AE005514FF /* Home View.swift in Sources */,
 				F3E5932D2BB79F7000CE4FE4 /* App List.swift in Sources */,

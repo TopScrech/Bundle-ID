@@ -25,16 +25,16 @@ struct AppList: View {
                 }
             }
             
-            Picker("Country", selection: $country) {
+            Picker("Region", selection: $country) {
                 Section("Default") {
-                    ForEach(Country.defaultCases, id: \.self) { country in
+                    ForEach(Region.defaultCases, id: \.self) { country in
                         Text("\(country) - \(country.rawValue)")
                             .tag("\(country)")
                     }
                 }
                 
                 Section("All Countries") {
-                    ForEach(Country.allCases, id: \.self) { country in
+                    ForEach(Region.allCases, id: \.self) { country in
                         Text("\(country) - \(country.rawValue)")
                             .tag("\(country)")
                     }
