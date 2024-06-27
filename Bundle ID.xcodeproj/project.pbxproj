@@ -121,12 +121,12 @@
 		F3E593182BB79EC300CE4FE4 /* Bundle ID */ = {
 			isa = PBXGroup;
 			children = (
+				F3E593192BB79EC300CE4FE4 /* Bundle ID App.swift */,
+				F3B5407D2BC35540005514FF /* Nav */,
 				F3CC4C882BC5B5DF0099539C /* Bundle-ID-Info.plist */,
 				F3E5931F2BB79EC300CE4FE4 /* Assets.xcassets */,
 				F3E593212BB79EC300CE4FE4 /* Bundle_ID.entitlements */,
 				F336780F2BC5EF5C0083E21C /* Localizable.xcstrings */,
-				F3E593192BB79EC300CE4FE4 /* Bundle ID App.swift */,
-				F3B5407D2BC35540005514FF /* Nav */,
 				F3B5407E2BC355AE005514FF /* Home View.swift */,
 				F3B540802BC35A12005514FF /* Starred Apps.swift */,
 				F3E5932C2BB79F7000CE4FE4 /* App List.swift */,
