@@ -47,7 +47,7 @@ struct AppCard: View {
             Button {
                 skOverlay = true
             } label: {
-                Label("Get", systemImage: "plus.app")
+                Label("Download", systemImage: "plus.app")
             }
             
             Divider()
