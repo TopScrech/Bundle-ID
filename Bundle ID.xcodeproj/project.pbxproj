@@ -37,6 +37,7 @@
 		F371A53A2C2DB09C006BDF0D /* Bundle_ID_Mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bundle_ID_Mac.entitlements; sourceTree = "<group>"; };
 		F371A5492C2DB137006BDF0D /* App List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App List.swift"; sourceTree = "<group>"; };
 		F371A54C2C2DB146006BDF0D /* App Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App Card.swift"; sourceTree = "<group>"; };
+		F371A5502C2DBCAE006BDF0D /* Bundle-ID-macOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Bundle-ID-macOS-Info.plist"; sourceTree = "<group>"; };
 		F3B5407E2BC355AE005514FF /* Home View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home View.swift"; sourceTree = "<group>"; };
 		F3B540802BC35A12005514FF /* Starred Apps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Starred Apps.swift"; sourceTree = "<group>"; };
 		F3CC4C882BC5B5DF0099539C /* Bundle-ID-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Bundle-ID-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -76,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				F371A53A2C2DB09C006BDF0D /* Bundle_ID_Mac.entitlements */,
+				F371A5502C2DBCAE006BDF0D /* Bundle-ID-macOS-Info.plist */,
 				F371A5492C2DB137006BDF0D /* App List.swift */,
 				F371A54C2C2DB146006BDF0D /* App Card.swift */,
 			);
@@ -289,8 +291,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Bundle ID";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_FILE = "Bundle-ID-macOS-Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -320,8 +321,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Bundle ID";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_FILE = "Bundle-ID-macOS-Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
