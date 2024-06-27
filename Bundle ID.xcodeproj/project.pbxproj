@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		F33678102BC5EF5C0083E21C /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = F336780F2BC5EF5C0083E21C /* Localizable.xcstrings */; };
+		F371A53E2C2DB0EE006BDF0D /* Bundle ID App.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E593192BB79EC300CE4FE4 /* Bundle ID App.swift */; };
+		F371A53F2C2DB0F8006BDF0D /* VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E5932E2BB79FBA00CE4FE4 /* VM.swift */; };
+		F371A5422C2DB0F8006BDF0D /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E593302BB7A0B400CE4FE4 /* Region.swift */; };
+		F371A5432C2DB0F8006BDF0D /* Starred Apps.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B540802BC35A12005514FF /* Starred Apps.swift */; };
+		F371A5442C2DB0F8006BDF0D /* Home View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B5407E2BC355AE005514FF /* Home View.swift */; };
+		F371A5452C2DB0F8006BDF0D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E593322BB7A46600CE4FE4 /* Model.swift */; };
+		F371A5482C2DB11E006BDF0D /* ScrechKit in Frameworks */ = {isa = PBXBuildFile; productRef = F371A5472C2DB11E006BDF0D /* ScrechKit */; };
+		F371A54A2C2DB137006BDF0D /* App List.swift in Sources */ = {isa = PBXBuildFile; fileRef = F371A5492C2DB137006BDF0D /* App List.swift */; };
+		F371A54D2C2DB146006BDF0D /* App Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = F371A54C2C2DB146006BDF0D /* App Card.swift */; };
+		F371A54F2C2DB286006BDF0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3E5931F2BB79EC300CE4FE4 /* Assets.xcassets */; };
 		F3B5407C2BC354CE005514FF /* ScrechKit in Frameworks */ = {isa = PBXBuildFile; productRef = F3B5407B2BC354CE005514FF /* ScrechKit */; };
 		F3B5407F2BC355AE005514FF /* Home View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B5407E2BC355AE005514FF /* Home View.swift */; };
 		F3B540812BC35A12005514FF /* Starred Apps.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B540802BC35A12005514FF /* Starred Apps.swift */; };
@@ -23,6 +33,10 @@
 
 /* Begin PBXFileReference section */
 		F336780F2BC5EF5C0083E21C /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		F371A52F2C2DB09B006BDF0D /* Bundle ID macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bundle ID macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F371A53A2C2DB09C006BDF0D /* Bundle_ID_Mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bundle_ID_Mac.entitlements; sourceTree = "<group>"; };
+		F371A5492C2DB137006BDF0D /* App List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App List.swift"; sourceTree = "<group>"; };
+		F371A54C2C2DB146006BDF0D /* App Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App Card.swift"; sourceTree = "<group>"; };
 		F3B5407E2BC355AE005514FF /* Home View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home View.swift"; sourceTree = "<group>"; };
 		F3B540802BC35A12005514FF /* Starred Apps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Starred Apps.swift"; sourceTree = "<group>"; };
 		F3CC4C882BC5B5DF0099539C /* Bundle-ID-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Bundle-ID-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -39,6 +53,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F371A52C2C2DB09B006BDF0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F371A5482C2DB11E006BDF0D /* ScrechKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F3E593132BB79EC300CE4FE4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -50,6 +72,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F371A5302C2DB09B006BDF0D /* Bundle ID Mac */ = {
+			isa = PBXGroup;
+			children = (
+				F371A53A2C2DB09C006BDF0D /* Bundle_ID_Mac.entitlements */,
+				F371A5492C2DB137006BDF0D /* App List.swift */,
+				F371A54C2C2DB146006BDF0D /* App Card.swift */,
+			);
+			path = "Bundle ID Mac";
+			sourceTree = "<group>";
+		};
+		F371A5462C2DB11E006BDF0D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F3B5407D2BC35540005514FF /* Nav */ = {
 			isa = PBXGroup;
 			children = (
@@ -62,7 +101,9 @@
 			isa = PBXGroup;
 			children = (
 				F3E593182BB79EC300CE4FE4 /* Bundle ID */,
+				F371A5302C2DB09B006BDF0D /* Bundle ID Mac */,
 				F3E593172BB79EC300CE4FE4 /* Products */,
+				F371A5462C2DB11E006BDF0D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				F3E593162BB79EC300CE4FE4 /* Bundle ID.app */,
+				F371A52F2C2DB09B006BDF0D /* Bundle ID macOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,6 +139,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F371A52E2C2DB09B006BDF0D /* Bundle ID macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F371A53B2C2DB09C006BDF0D /* Build configuration list for PBXNativeTarget "Bundle ID macOS" */;
+			buildPhases = (
+				F371A52B2C2DB09B006BDF0D /* Sources */,
+				F371A52C2C2DB09B006BDF0D /* Frameworks */,
+				F371A52D2C2DB09B006BDF0D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Bundle ID macOS";
+			packageProductDependencies = (
+				F371A5472C2DB11E006BDF0D /* ScrechKit */,
+			);
+			productName = "Bundle ID Mac";
+			productReference = F371A52F2C2DB09B006BDF0D /* Bundle ID macOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 		F3E593152BB79EC300CE4FE4 /* Bundle ID */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F3E593272BB79EC300CE4FE4 /* Build configuration list for PBXNativeTarget "Bundle ID" */;
@@ -124,9 +186,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1530;
+				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
+					F371A52E2C2DB09B006BDF0D = {
+						CreatedOnToolsVersion = 16.0;
+					};
 					F3E593152BB79EC300CE4FE4 = {
 						CreatedOnToolsVersion = 15.3;
 					};
@@ -150,11 +215,20 @@
 			projectRoot = "";
 			targets = (
 				F3E593152BB79EC300CE4FE4 /* Bundle ID */,
+				F371A52E2C2DB09B006BDF0D /* Bundle ID macOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F371A52D2C2DB09B006BDF0D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F371A54F2C2DB286006BDF0D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F3E593142BB79EC300CE4FE4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -167,6 +241,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F371A52B2C2DB09B006BDF0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F371A53E2C2DB0EE006BDF0D /* Bundle ID App.swift in Sources */,
+				F371A53F2C2DB0F8006BDF0D /* VM.swift in Sources */,
+				F371A54A2C2DB137006BDF0D /* App List.swift in Sources */,
+				F371A5422C2DB0F8006BDF0D /* Region.swift in Sources */,
+				F371A5432C2DB0F8006BDF0D /* Starred Apps.swift in Sources */,
+				F371A54D2C2DB146006BDF0D /* App Card.swift in Sources */,
+				F371A5442C2DB0F8006BDF0D /* Home View.swift in Sources */,
+				F371A5452C2DB0F8006BDF0D /* Model.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F3E593122BB79EC300CE4FE4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -186,6 +275,68 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		F371A53C2C2DB09C006BDF0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Bundle ID Mac/Bundle_ID_Mac.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = 8FQUA2F388;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Bundle ID";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.topscrech.Bundle-ID";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F371A53D2C2DB09C006BDF0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Bundle ID Mac/Bundle_ID_Mac.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = 8FQUA2F388;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Bundle ID";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.topscrech.Bundle-ID";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		F3E593252BB79EC300CE4FE4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -324,7 +475,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Bundle-ID-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Bundle ID";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -342,11 +493,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.topscrech.Bundle-ID";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator xros xrsimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,3,7";
+				TVOS_DEPLOYMENT_TARGET = 17.0;
+				XROS_DEPLOYMENT_TARGET = 1.0;
 			};
 			name = Debug;
 		};
@@ -366,7 +519,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Bundle-ID-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Bundle ID";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -384,17 +537,28 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.topscrech.Bundle-ID";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator xros xrsimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,3,7";
+				TVOS_DEPLOYMENT_TARGET = 17.0;
+				XROS_DEPLOYMENT_TARGET = 1.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F371A53B2C2DB09C006BDF0D /* Build configuration list for PBXNativeTarget "Bundle ID macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F371A53C2C2DB09C006BDF0D /* Debug */,
+				F371A53D2C2DB09C006BDF0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F3E593112BB79EC300CE4FE4 /* Build configuration list for PBXProject "Bundle ID" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -427,6 +591,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		F371A5472C2DB11E006BDF0D /* ScrechKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F3B5407A2BC354CE005514FF /* XCRemoteSwiftPackageReference "ScrechKit" */;
+			productName = ScrechKit;
+		};
 		F3B5407B2BC354CE005514FF /* ScrechKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F3B5407A2BC354CE005514FF /* XCRemoteSwiftPackageReference "ScrechKit" */;

@@ -7,59 +7,44 @@ struct AppCard: View {
         self.app = app
     }
     
-    @State private var uiImage: UIImage?
-    @State private var skOverlay = false
-    
-    private let cache = NSCache<NSURL, UIImage>()
+    @State private var uiImage: NSImage?
+    private let cache = NSCache<NSURL, NSImage>()
     
     var body: some View {
-        Button {
-            skOverlay = true
-        } label: {
-            HStack {
-                if let uiImage {
-                    Image(uiImage: uiImage)
-                        .resizable()
-                        .frame(width: 64, height: 64)
-                        .clipShape(.rect(cornerRadius: 16))
-                } else {
-                    ProgressView()
-                        .frame(width: 64, height: 64)
-                }
-                
-                VStack(alignment: .leading) {
-                    Text(app.artistName)
-                        .caption(.bold)
-                    
-                    Text(app.trackName)
-                        .rounded()
-                    
-                    Text(app.bundleID)
-                        .caption()
-                        .foregroundStyle(.secondary)
-                        .monospaced()
-                }
+        HStack {
+            if let uiImage {
+                Image(nsImage: uiImage)
+                    .resizable()
+                    .frame(width: 64, height: 64)
+                    .clipShape(.rect(cornerRadius: 16))
+            } else {
+                ProgressView()
+                    .frame(width: 64, height: 64)
             }
-            .foregroundStyle(.foreground)
+            
+            VStack(alignment: .leading) {
+                Text(app.trackName)
+                    .rounded()
+                    .bold()
+                
+                Text(app.artistName)
+                    .caption()
+                
+                Text(app.bundleID)
+                    .caption()
+                    .foregroundStyle(.secondary)
+                    .monospaced()
+            }
         }
-        .appStoreOverlay($skOverlay, id: app.trackId)
         .contextMenu {
             Button {
-                skOverlay = true
-            } label: {
-                Label("Download", systemImage: "plus.app")
-            }
-            
-            Divider()
-            
-            Button {
-                UIPasteboard.general.string = app.bundleID
+                NSPasteboard.general.setString(app.bundleID, forType: .string)
             } label: {
                 Label("Copy Bundle ID", systemImage: "doc.on.doc")
             }
             
             Button {
-                UIPasteboard.general.string = String(app.trackId)
+                NSPasteboard.general.setString("\(app.trackId)", forType: .string)
             } label: {
                 Label("Copy App ID", systemImage: "doc.on.doc")
             }
@@ -88,7 +73,7 @@ struct AppCard: View {
                         }
                         
                         DispatchQueue.main.async {
-                            let image = UIImage(data: data)
+                            let image = NSImage(data: data)
                             
                             if let image {
                                 cache.setObject(image, forKey: nsUrl)

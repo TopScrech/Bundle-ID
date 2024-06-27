@@ -2,25 +2,32 @@ import ScrechKit
 import SwiftData
 
 @main
-struct Bundle_IDApp: App {
+struct BundleIDApp: App {
     //    var sharedModelContainer: ModelContainer = {
     //        let schema = Schema([
     //            Item.self,
     //        ])
-    //        
+    //
     //        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-    //        
+    //
     //        do {
     //            return try ModelContainer(for: schema, configurations: [modelConfiguration])
     //        } catch {
     //            fatalError("Could not create ModelContainer: \(error)")
-    //        }
+    //        }No data received
     //    }()
     
     var body: some Scene {
+#if os(macOS)
+        MenuBarExtra("Bundle ID", systemImage: "magnifyingglass") {
+            AppList()
+        }
+        .menuBarExtraStyle(.window)
+#else
         WindowGroup {
             NavContainer()
         }
+#endif
         //        .modelContainer(sharedModelContainer)
     }
 }
