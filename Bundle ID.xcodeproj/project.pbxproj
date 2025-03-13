@@ -33,7 +33,7 @@
 
 /* Begin PBXFileReference section */
 		F336780F2BC5EF5C0083E21C /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
-		F371A52F2C2DB09B006BDF0D /* Bundle ID macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bundle ID macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F371A52F2C2DB09B006BDF0D /* macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = macOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F371A53A2C2DB09C006BDF0D /* Bundle_ID_Mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bundle_ID_Mac.entitlements; sourceTree = "<group>"; };
 		F371A5492C2DB137006BDF0D /* App List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App List.swift"; sourceTree = "<group>"; };
 		F371A54C2C2DB146006BDF0D /* App Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App Card.swift"; sourceTree = "<group>"; };
@@ -41,7 +41,7 @@
 		F3B5407E2BC355AE005514FF /* Home View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home View.swift"; sourceTree = "<group>"; };
 		F3B540802BC35A12005514FF /* Starred Apps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Starred Apps.swift"; sourceTree = "<group>"; };
 		F3CC4C882BC5B5DF0099539C /* Bundle-ID-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Bundle-ID-Info.plist"; sourceTree = SOURCE_ROOT; };
-		F3E593162BB79EC300CE4FE4 /* Bundle ID.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bundle ID.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3E593162BB79EC300CE4FE4 /* iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3E593192BB79EC300CE4FE4 /* Bundle ID App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle ID App.swift"; sourceTree = "<group>"; };
 		F3E5931F2BB79EC300CE4FE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3E593212BB79EC300CE4FE4 /* Bundle_ID.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bundle_ID.entitlements; sourceTree = "<group>"; };
@@ -112,8 +112,8 @@
 		F3E593172BB79EC300CE4FE4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F3E593162BB79EC300CE4FE4 /* Bundle ID.app */,
-				F371A52F2C2DB09B006BDF0D /* Bundle ID macOS.app */,
+				F3E593162BB79EC300CE4FE4 /* iOS.app */,
+				F371A52F2C2DB09B006BDF0D /* macOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,9 +141,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F371A52E2C2DB09B006BDF0D /* Bundle ID macOS */ = {
+		F371A52E2C2DB09B006BDF0D /* macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F371A53B2C2DB09C006BDF0D /* Build configuration list for PBXNativeTarget "Bundle ID macOS" */;
+			buildConfigurationList = F371A53B2C2DB09C006BDF0D /* Build configuration list for PBXNativeTarget "macOS" */;
 			buildPhases = (
 				F371A52B2C2DB09B006BDF0D /* Sources */,
 				F371A52C2C2DB09B006BDF0D /* Frameworks */,
@@ -153,17 +153,17 @@
 			);
 			dependencies = (
 			);
-			name = "Bundle ID macOS";
+			name = macOS;
 			packageProductDependencies = (
 				F371A5472C2DB11E006BDF0D /* ScrechKit */,
 			);
 			productName = "Bundle ID Mac";
-			productReference = F371A52F2C2DB09B006BDF0D /* Bundle ID macOS.app */;
+			productReference = F371A52F2C2DB09B006BDF0D /* macOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F3E593152BB79EC300CE4FE4 /* Bundle ID */ = {
+		F3E593152BB79EC300CE4FE4 /* iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F3E593272BB79EC300CE4FE4 /* Build configuration list for PBXNativeTarget "Bundle ID" */;
+			buildConfigurationList = F3E593272BB79EC300CE4FE4 /* Build configuration list for PBXNativeTarget "iOS" */;
 			buildPhases = (
 				F3E593122BB79EC300CE4FE4 /* Sources */,
 				F3E593132BB79EC300CE4FE4 /* Frameworks */,
@@ -173,12 +173,12 @@
 			);
 			dependencies = (
 			);
-			name = "Bundle ID";
+			name = iOS;
 			packageProductDependencies = (
 				F3B5407B2BC354CE005514FF /* ScrechKit */,
 			);
 			productName = "Bundle ID";
-			productReference = F3E593162BB79EC300CE4FE4 /* Bundle ID.app */;
+			productReference = F3E593162BB79EC300CE4FE4 /* iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -189,7 +189,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1600;
-				LastUpgradeCheck = 1600;
+				LastUpgradeCheck = 1630;
 				TargetAttributes = {
 					F371A52E2C2DB09B006BDF0D = {
 						CreatedOnToolsVersion = 16.0;
@@ -216,8 +216,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F3E593152BB79EC300CE4FE4 /* Bundle ID */,
-				F371A52E2C2DB09B006BDF0D /* Bundle ID macOS */,
+				F3E593152BB79EC300CE4FE4 /* iOS */,
+				F371A52E2C2DB09B006BDF0D /* macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -287,11 +287,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 8FQUA2F388;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Bundle-ID-macOS-Info.plist";
+				INFOPLIST_FILE = "Bundle ID Mac/Bundle-ID-macOS-Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -317,11 +316,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 8FQUA2F388;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Bundle-ID-macOS-Info.plist";
+				INFOPLIST_FILE = "Bundle ID Mac/Bundle-ID-macOS-Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -374,6 +372,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 8FQUA2F388;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -439,6 +438,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 8FQUA2F388;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -469,7 +469,6 @@
 				CURRENT_PROJECT_VERSION = 0;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 8FQUA2F388;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -513,7 +512,6 @@
 				CURRENT_PROJECT_VERSION = 0;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 8FQUA2F388;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -550,7 +548,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F371A53B2C2DB09C006BDF0D /* Build configuration list for PBXNativeTarget "Bundle ID macOS" */ = {
+		F371A53B2C2DB09C006BDF0D /* Build configuration list for PBXNativeTarget "macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F371A53C2C2DB09C006BDF0D /* Debug */,
@@ -568,7 +566,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F3E593272BB79EC300CE4FE4 /* Build configuration list for PBXNativeTarget "Bundle ID" */ = {
+		F3E593272BB79EC300CE4FE4 /* Build configuration list for PBXNativeTarget "iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F3E593282BB79EC300CE4FE4 /* Debug */,
