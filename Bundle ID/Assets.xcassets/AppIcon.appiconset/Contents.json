@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "Bundle Id.png",
+      "filename" : "Bundle ID.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
@@ -67,7 +67,7 @@
       "size" : "512x512"
     },
     {
-      "filename" : "Bundle Id 1.png",
+      "filename" : "Bundle ID 1.png",
       "idiom" : "universal",
       "platform" : "watchos",
       "size" : "1024x1024"

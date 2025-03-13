@@ -168,8 +168,8 @@ class JSONNull: Codable, Hashable {
         true
     }
     
-    public var hashValue: Int {
-        0
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(0)
     }
     
     public init() {}
@@ -178,7 +178,13 @@ class JSONNull: Codable, Hashable {
         let container = try decoder.singleValueContainer()
         
         if !container.decodeNil() {
-            throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
+            throw DecodingError.typeMismatch(
+                JSONNull.self,
+                DecodingError.Context(
+                    codingPath: decoder.codingPath,
+                    debugDescription: "Wrong type for JSONNull"
+                )
+            )
         }
     }
     
@@ -404,14 +410,19 @@ class JSONAny: Codable {
     static func encode(to container: inout SingleValueEncodingContainer, value: Any) throws {
         if let value = value as? Bool {
             try container.encode(value)
+            
         } else if let value = value as? Int64 {
             try container.encode(value)
+            
         } else if let value = value as? Double {
             try container.encode(value)
+            
         } else if let value = value as? String {
             try container.encode(value)
+            
         } else if value is JSONNull {
             try container.encodeNil()
+            
         } else {
             throw encodingError(forValue: value, codingPath: container.codingPath)
         }
