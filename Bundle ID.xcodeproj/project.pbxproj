@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F33678102BC5EF5C0083E21C /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = F336780F2BC5EF5C0083E21C /* Localizable.xcstrings */; };
-		F371A53E2C2DB0EE006BDF0D /* Bundle ID App.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E593192BB79EC300CE4FE4 /* Bundle ID App.swift */; };
+		F371A53E2C2DB0EE006BDF0D /* Bundle ID.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E593192BB79EC300CE4FE4 /* Bundle ID.swift */; };
 		F371A53F2C2DB0F8006BDF0D /* VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E5932E2BB79FBA00CE4FE4 /* VM.swift */; };
 		F371A5422C2DB0F8006BDF0D /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E593302BB7A0B400CE4FE4 /* Region.swift */; };
 		F371A5432C2DB0F8006BDF0D /* Starred Apps.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B540802BC35A12005514FF /* Starred Apps.swift */; };
@@ -21,7 +21,7 @@
 		F3B5407C2BC354CE005514FF /* ScrechKit in Frameworks */ = {isa = PBXBuildFile; productRef = F3B5407B2BC354CE005514FF /* ScrechKit */; };
 		F3B5407F2BC355AE005514FF /* Home View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B5407E2BC355AE005514FF /* Home View.swift */; };
 		F3B540812BC35A12005514FF /* Starred Apps.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B540802BC35A12005514FF /* Starred Apps.swift */; };
-		F3E5931A2BB79EC300CE4FE4 /* Bundle ID App.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E593192BB79EC300CE4FE4 /* Bundle ID App.swift */; };
+		F3E5931A2BB79EC300CE4FE4 /* Bundle ID.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E593192BB79EC300CE4FE4 /* Bundle ID.swift */; };
 		F3E593202BB79EC300CE4FE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3E5931F2BB79EC300CE4FE4 /* Assets.xcassets */; };
 		F3E5932B2BB79F5000CE4FE4 /* Nav Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E5932A2BB79F5000CE4FE4 /* Nav Container.swift */; };
 		F3E5932D2BB79F7000CE4FE4 /* App List.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E5932C2BB79F7000CE4FE4 /* App List.swift */; };
@@ -38,11 +38,11 @@
 		F371A5492C2DB137006BDF0D /* App List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App List.swift"; sourceTree = "<group>"; };
 		F371A54C2C2DB146006BDF0D /* App Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App Card.swift"; sourceTree = "<group>"; };
 		F371A5502C2DBCAE006BDF0D /* Bundle-ID-macOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Bundle-ID-macOS-Info.plist"; sourceTree = "<group>"; };
+		F3AC0BE22D8265650077AC61 /* Bundle-ID-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Bundle-ID-Info.plist"; sourceTree = "<group>"; };
 		F3B5407E2BC355AE005514FF /* Home View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home View.swift"; sourceTree = "<group>"; };
 		F3B540802BC35A12005514FF /* Starred Apps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Starred Apps.swift"; sourceTree = "<group>"; };
-		F3CC4C882BC5B5DF0099539C /* Bundle-ID-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Bundle-ID-Info.plist"; sourceTree = SOURCE_ROOT; };
 		F3E593162BB79EC300CE4FE4 /* iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3E593192BB79EC300CE4FE4 /* Bundle ID App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle ID App.swift"; sourceTree = "<group>"; };
+		F3E593192BB79EC300CE4FE4 /* Bundle ID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle ID.swift"; sourceTree = "<group>"; };
 		F3E5931F2BB79EC300CE4FE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3E593212BB79EC300CE4FE4 /* Bundle_ID.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bundle_ID.entitlements; sourceTree = "<group>"; };
 		F3E5932A2BB79F5000CE4FE4 /* Nav Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Nav Container.swift"; sourceTree = "<group>"; };
@@ -76,8 +76,8 @@
 		F371A5302C2DB09B006BDF0D /* Bundle ID Mac */ = {
 			isa = PBXGroup;
 			children = (
-				F371A53A2C2DB09C006BDF0D /* Bundle_ID_Mac.entitlements */,
 				F371A5502C2DBCAE006BDF0D /* Bundle-ID-macOS-Info.plist */,
+				F371A53A2C2DB09C006BDF0D /* Bundle_ID_Mac.entitlements */,
 				F371A5492C2DB137006BDF0D /* App List.swift */,
 				F371A54C2C2DB146006BDF0D /* App Card.swift */,
 			);
@@ -121,11 +121,11 @@
 		F3E593182BB79EC300CE4FE4 /* Bundle ID */ = {
 			isa = PBXGroup;
 			children = (
-				F3E593192BB79EC300CE4FE4 /* Bundle ID App.swift */,
+				F3E593192BB79EC300CE4FE4 /* Bundle ID.swift */,
 				F3B5407D2BC35540005514FF /* Nav */,
-				F3CC4C882BC5B5DF0099539C /* Bundle-ID-Info.plist */,
-				F3E5931F2BB79EC300CE4FE4 /* Assets.xcassets */,
+				F3AC0BE22D8265650077AC61 /* Bundle-ID-Info.plist */,
 				F3E593212BB79EC300CE4FE4 /* Bundle_ID.entitlements */,
+				F3E5931F2BB79EC300CE4FE4 /* Assets.xcassets */,
 				F336780F2BC5EF5C0083E21C /* Localizable.xcstrings */,
 				F3B5407E2BC355AE005514FF /* Home View.swift */,
 				F3B540802BC35A12005514FF /* Starred Apps.swift */,
@@ -247,7 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F371A53E2C2DB0EE006BDF0D /* Bundle ID App.swift in Sources */,
+				F371A53E2C2DB0EE006BDF0D /* Bundle ID.swift in Sources */,
 				F371A53F2C2DB0F8006BDF0D /* VM.swift in Sources */,
 				F371A54A2C2DB137006BDF0D /* App List.swift in Sources */,
 				F371A5422C2DB0F8006BDF0D /* Region.swift in Sources */,
@@ -266,7 +266,7 @@
 				F3E5932F2BB79FBA00CE4FE4 /* VM.swift in Sources */,
 				F3E5932B2BB79F5000CE4FE4 /* Nav Container.swift in Sources */,
 				F3E593312BB7A0B400CE4FE4 /* Region.swift in Sources */,
-				F3E5931A2BB79EC300CE4FE4 /* Bundle ID App.swift in Sources */,
+				F3E5931A2BB79EC300CE4FE4 /* Bundle ID.swift in Sources */,
 				F3B5407F2BC355AE005514FF /* Home View.swift in Sources */,
 				F3E5932D2BB79F7000CE4FE4 /* App List.swift in Sources */,
 				F3B540812BC35A12005514FF /* Starred Apps.swift in Sources */,
@@ -476,7 +476,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Bundle-ID-Info.plist";
+				INFOPLIST_FILE = "Bundle ID/Bundle-ID-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Bundle ID";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -519,7 +519,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Bundle-ID-Info.plist";
+				INFOPLIST_FILE = "Bundle ID/Bundle-ID-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Bundle ID";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;

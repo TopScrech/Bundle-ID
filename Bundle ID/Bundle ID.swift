@@ -2,10 +2,10 @@ import ScrechKit
 import SwiftData
 
 @main
-struct BundleIDApp: App {
-    //    var sharedModelContainer: ModelContainer = {
+struct BundleID: App {
+    //    private var sharedModelContainer: ModelContainer = {
     //        let schema = Schema([
-    //            Item.self,
+    //            Item.self
     //        ])
     //
     //        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
@@ -13,8 +13,8 @@ struct BundleIDApp: App {
     //        do {
     //            return try ModelContainer(for: schema, configurations: [modelConfiguration])
     //        } catch {
-    //            fatalError("Could not create ModelContainer: \(error)")
-    //        }No data received
+    //            fatalError("Could not create ModelContainer:", error")
+    //        }
     //    }()
     
     var body: some Scene {
