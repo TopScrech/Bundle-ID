@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 90;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -56,19 +56,15 @@
 /* Begin PBXFrameworksBuildPhase section */
 		F371A52C2C2DB09B006BDF0D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				F371A5482C2DB11E006BDF0D /* ScrechKit in Frameworks */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F3E593132BB79EC300CE4FE4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				F3B5407C2BC354CE005514FF /* ScrechKit in Frameworks */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
@@ -151,8 +147,6 @@
 			);
 			buildRules = (
 			);
-			dependencies = (
-			);
 			name = macOS;
 			packageProductDependencies = (
 				F371A5472C2DB11E006BDF0D /* ScrechKit */,
@@ -170,8 +164,6 @@
 				F3E593142BB79EC300CE4FE4 /* Resources */,
 			);
 			buildRules = (
-			);
-			dependencies = (
 			);
 			name = iOS;
 			packageProductDependencies = (
@@ -211,7 +203,7 @@
 			packageReferences = (
 				F3B5407A2BC354CE005514FF /* XCRemoteSwiftPackageReference "ScrechKit" */,
 			);
-			preferredProjectObjectVersion = 77;
+			preferredProjectObjectVersion = 90;
 			productRefGroup = F3E593172BB79EC300CE4FE4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -225,27 +217,22 @@
 /* Begin PBXResourcesBuildPhase section */
 		F371A52D2C2DB09B006BDF0D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				F371A54F2C2DB286006BDF0D /* Assets.xcassets in Resources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F3E593142BB79EC300CE4FE4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				F33678102BC5EF5C0083E21C /* Localizable.xcstrings in Resources */,
 				F3E593202BB79EC300CE4FE4 /* Assets.xcassets in Resources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F371A52B2C2DB09B006BDF0D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				F371A53E2C2DB0EE006BDF0D /* Bundle ID.swift in Sources */,
 				F371A53F2C2DB0F8006BDF0D /* VM.swift in Sources */,
@@ -256,11 +243,9 @@
 				F371A5442C2DB0F8006BDF0D /* Home View.swift in Sources */,
 				F371A5452C2DB0F8006BDF0D /* Model.swift in Sources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F3E593122BB79EC300CE4FE4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				F3E593382BB8045F00CE4FE4 /* App Card.swift in Sources */,
 				F3E5932F2BB79FBA00CE4FE4 /* VM.swift in Sources */,
@@ -272,12 +257,11 @@
 				F3B540812BC35A12005514FF /* Starred Apps.swift in Sources */,
 				F3E593332BB7A46600CE4FE4 /* Model.swift in Sources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		F371A53C2C2DB09C006BDF0D /* Debug */ = {
+		F371A53C2C2DB09C006BDF0D /* Debug configuration for PBXNativeTarget "macOS" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -285,7 +269,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Bundle ID Mac/Bundle_ID_Mac.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -299,7 +283,6 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.topscrech.Bundle-ID";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -308,7 +291,7 @@
 			};
 			name = Debug;
 		};
-		F371A53D2C2DB09C006BDF0D /* Release */ = {
+		F371A53D2C2DB09C006BDF0D /* Release configuration for PBXNativeTarget "macOS" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -316,7 +299,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Bundle ID Mac/Bundle_ID_Mac.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -330,7 +313,6 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.topscrech.Bundle-ID";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -339,7 +321,7 @@
 			};
 			name = Release;
 		};
-		F3E593252BB79EC300CE4FE4 /* Debug */ = {
+		F3E593252BB79EC300CE4FE4 /* Debug configuration for PBXProject "Bundle ID" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -397,6 +379,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -405,7 +388,7 @@
 			};
 			name = Debug;
 		};
-		F3E593262BB79EC300CE4FE4 /* Release */ = {
+		F3E593262BB79EC300CE4FE4 /* Release configuration for PBXProject "Bundle ID" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -457,13 +440,14 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 			};
 			name = Release;
 		};
-		F3E593282BB79EC300CE4FE4 /* Debug */ = {
+		F3E593282BB79EC300CE4FE4 /* Debug configuration for PBXNativeTarget "iOS" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -492,7 +476,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.topscrech.Bundle-ID";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -506,7 +489,7 @@
 			};
 			name = Debug;
 		};
-		F3E593292BB79EC300CE4FE4 /* Release */ = {
+		F3E593292BB79EC300CE4FE4 /* Release configuration for PBXNativeTarget "iOS" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -535,7 +518,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.topscrech.Bundle-ID";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -555,28 +537,25 @@
 		F371A53B2C2DB09C006BDF0D /* Build configuration list for PBXNativeTarget "macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F371A53C2C2DB09C006BDF0D /* Debug */,
-				F371A53D2C2DB09C006BDF0D /* Release */,
+				F371A53C2C2DB09C006BDF0D /* Debug configuration for PBXNativeTarget "macOS" */,
+				F371A53D2C2DB09C006BDF0D /* Release configuration for PBXNativeTarget "macOS" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		F3E593112BB79EC300CE4FE4 /* Build configuration list for PBXProject "Bundle ID" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F3E593252BB79EC300CE4FE4 /* Debug */,
-				F3E593262BB79EC300CE4FE4 /* Release */,
+				F3E593252BB79EC300CE4FE4 /* Debug configuration for PBXProject "Bundle ID" */,
+				F3E593262BB79EC300CE4FE4 /* Release configuration for PBXProject "Bundle ID" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		F3E593272BB79EC300CE4FE4 /* Build configuration list for PBXNativeTarget "iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F3E593282BB79EC300CE4FE4 /* Debug */,
-				F3E593292BB79EC300CE4FE4 /* Release */,
+				F3E593282BB79EC300CE4FE4 /* Debug configuration for PBXNativeTarget "iOS" */,
+				F3E593292BB79EC300CE4FE4 /* Release configuration for PBXNativeTarget "iOS" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
