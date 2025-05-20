@@ -34,17 +34,17 @@
 /* Begin PBXFileReference section */
 		F336780F2BC5EF5C0083E21C /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		F371A52F2C2DB09B006BDF0D /* macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = macOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F371A53A2C2DB09C006BDF0D /* Bundle_ID_Mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bundle_ID_Mac.entitlements; sourceTree = "<group>"; };
+		F371A53A2C2DB09C006BDF0D /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		F371A5492C2DB137006BDF0D /* App List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App List.swift"; sourceTree = "<group>"; };
 		F371A54C2C2DB146006BDF0D /* App Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App Card.swift"; sourceTree = "<group>"; };
-		F371A5502C2DBCAE006BDF0D /* Bundle-ID-macOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Bundle-ID-macOS-Info.plist"; sourceTree = "<group>"; };
-		F3AC0BE22D8265650077AC61 /* Bundle-ID-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Bundle-ID-Info.plist"; sourceTree = "<group>"; };
+		F371A5502C2DBCAE006BDF0D /* macOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = macOS.plist; sourceTree = "<group>"; };
+		F3AC0BE22D8265650077AC61 /* iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = iOS.plist; sourceTree = "<group>"; };
 		F3B5407E2BC355AE005514FF /* Home View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home View.swift"; sourceTree = "<group>"; };
 		F3B540802BC35A12005514FF /* Starred Apps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Starred Apps.swift"; sourceTree = "<group>"; };
 		F3E593162BB79EC300CE4FE4 /* iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3E593192BB79EC300CE4FE4 /* Bundle ID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle ID.swift"; sourceTree = "<group>"; };
 		F3E5931F2BB79EC300CE4FE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F3E593212BB79EC300CE4FE4 /* Bundle_ID.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bundle_ID.entitlements; sourceTree = "<group>"; };
+		F3E593212BB79EC300CE4FE4 /* iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iOS.entitlements; sourceTree = "<group>"; };
 		F3E5932A2BB79F5000CE4FE4 /* Nav Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Nav Container.swift"; sourceTree = "<group>"; };
 		F3E5932C2BB79F7000CE4FE4 /* App List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App List.swift"; sourceTree = "<group>"; };
 		F3E5932E2BB79FBA00CE4FE4 /* VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM.swift; sourceTree = "<group>"; };
@@ -72,8 +72,8 @@
 		F371A5302C2DB09B006BDF0D /* Bundle ID Mac */ = {
 			isa = PBXGroup;
 			children = (
-				F371A5502C2DBCAE006BDF0D /* Bundle-ID-macOS-Info.plist */,
-				F371A53A2C2DB09C006BDF0D /* Bundle_ID_Mac.entitlements */,
+				F371A5502C2DBCAE006BDF0D /* macOS.plist */,
+				F371A53A2C2DB09C006BDF0D /* macOS.entitlements */,
 				F371A5492C2DB137006BDF0D /* App List.swift */,
 				F371A54C2C2DB146006BDF0D /* App Card.swift */,
 			);
@@ -119,8 +119,8 @@
 			children = (
 				F3E593192BB79EC300CE4FE4 /* Bundle ID.swift */,
 				F3B5407D2BC35540005514FF /* Nav */,
-				F3AC0BE22D8265650077AC61 /* Bundle-ID-Info.plist */,
-				F3E593212BB79EC300CE4FE4 /* Bundle_ID.entitlements */,
+				F3AC0BE22D8265650077AC61 /* iOS.plist */,
+				F3E593212BB79EC300CE4FE4 /* iOS.entitlements */,
 				F3E5931F2BB79EC300CE4FE4 /* Assets.xcassets */,
 				F336780F2BC5EF5C0083E21C /* Localizable.xcstrings */,
 				F3B5407E2BC355AE005514FF /* Home View.swift */,
@@ -266,7 +266,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Bundle ID Mac/Bundle_ID_Mac.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Bundle ID Mac/macOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 0;
@@ -274,7 +274,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Bundle ID Mac/Bundle-ID-macOS-Info.plist";
+				INFOPLIST_FILE = "Bundle ID Mac/macOS.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Bundle ID";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -296,7 +296,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Bundle ID Mac/Bundle_ID_Mac.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Bundle ID Mac/macOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 0;
@@ -304,7 +304,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Bundle ID Mac/Bundle-ID-macOS-Info.plist";
+				INFOPLIST_FILE = "Bundle ID Mac/macOS.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Bundle ID";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -452,7 +452,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Bundle ID/Bundle_ID.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Bundle ID/iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0;
 				DEAD_CODE_STRIPPING = YES;
@@ -460,7 +460,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Bundle ID/Bundle-ID-Info.plist";
+				INFOPLIST_FILE = "Bundle ID/iOS.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Bundle ID";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -494,7 +494,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Bundle ID/Bundle_ID.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Bundle ID/iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0;
 				DEAD_CODE_STRIPPING = YES;
@@ -502,7 +502,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Bundle ID/Bundle-ID-Info.plist";
+				INFOPLIST_FILE = "Bundle ID/iOS.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Bundle ID";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
