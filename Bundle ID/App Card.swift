@@ -36,7 +36,7 @@ struct AppCard: View {
                     
                     Text(app.bundleID)
                         .caption()
-                        .foregroundStyle(.secondary)
+                        .secondary()
                         .monospaced()
                 }
             }

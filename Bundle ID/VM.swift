@@ -64,7 +64,7 @@ final class VM {
                 let welcome = try JSONDecoder().decode(Welcome.self, from: cleanJsonData)
                 self.data = welcome
             } catch {
-                print("Decoder error: \(error.localizedDescription)")
+                print("Decoder error:", error.localizedDescription)
                 self.data = nil
             }
         }
