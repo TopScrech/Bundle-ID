@@ -4,13 +4,13 @@ struct HomeView: View {
     var body: some View {
         TabView {
             AppList()
-                .tag(1)
+                .tag(0)
                 .tabItem {
                     Label("App Store", systemImage: "hammer")
                 }
             
             StarredApps()
-                .tag(2)
+                .tag(1)
                 .tabItem {
                     Label("Favorite", systemImage: "star")
                 }
