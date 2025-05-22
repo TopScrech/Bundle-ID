@@ -6,7 +6,7 @@ struct Welcome: Codable {
 }
 
 struct Result: Codable {
-    let artworkUrl60, artworkUrl512, artworkUrl100: String
+    let artworkUrl512: String
     let bundleID: String
     let trackId: Int
     let trackName: String
@@ -46,12 +46,12 @@ struct Result: Codable {
     //    let sellerURL: String?
     
     enum CodingKeys: String, CodingKey {
-        case artworkUrl60, artworkUrl512, artworkUrl100
-        case bundleID = "bundleId"
-        case trackId
-        case trackName
-        case trackViewUrl
-        case artistName
+        case artworkUrl512,
+             bundleID = "bundleId",
+             trackId,
+             trackName,
+             trackViewUrl,
+             artistName
         //        case advisories
         //        case features
         //        case isGameCenterEnabled

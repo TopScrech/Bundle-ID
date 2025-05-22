@@ -47,6 +47,15 @@ struct AppCard: View {
                 Label("Download", systemImage: "plus.app")
             }
 #endif
+#if os(macOS)
+            Button {
+                Task {
+                    try await downloadFile(app.artworkUrl512)
+                }
+            } label: {
+                Label("Donwload app icon", systemImage: "square.and.arrow.down")
+            }
+#endif
             Divider()
             
             Button {
@@ -71,6 +80,22 @@ struct AppCard: View {
             
             ShareLink(item: app.trackViewUrl)
         }
+    }
+    
+    @available(macOS 10.10, *)
+    func downloadFile(_ urlString: String) async throws -> URL {
+        guard let url = URL(string: urlString) else {
+            throw URLError(.badURL)
+        }
+        
+        let (data, _) = try await URLSession.shared.data(from: url)
+        
+        let documentsUrl = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask).first!
+        let fileUrl = documentsUrl.appendingPathComponent(url.lastPathComponent)
+        
+        try data.write(to: fileUrl)
+        
+        return fileUrl
     }
 }
 
