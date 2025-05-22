@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F33678102BC5EF5C0083E21C /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = F336780F2BC5EF5C0083E21C /* Localizable.xcstrings */; };
+		F34345CA2DDF05100033A7DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F34345C92DDF05100033A7DE /* Assets.xcassets */; };
 		F371A53E2C2DB0EE006BDF0D /* Bundle ID.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E593192BB79EC300CE4FE4 /* Bundle ID.swift */; };
 		F371A53F2C2DB0F8006BDF0D /* VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E5932E2BB79FBA00CE4FE4 /* VM.swift */; };
 		F371A5422C2DB0F8006BDF0D /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E593302BB7A0B400CE4FE4 /* Region.swift */; };
@@ -17,7 +18,6 @@
 		F371A5482C2DB11E006BDF0D /* ScrechKit in Frameworks */ = {isa = PBXBuildFile; productRef = F371A5472C2DB11E006BDF0D /* ScrechKit */; };
 		F371A54A2C2DB137006BDF0D /* App List.swift in Sources */ = {isa = PBXBuildFile; fileRef = F371A5492C2DB137006BDF0D /* App List.swift */; };
 		F371A54D2C2DB146006BDF0D /* App Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = F371A54C2C2DB146006BDF0D /* App Card.swift */; };
-		F371A54F2C2DB286006BDF0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3E5931F2BB79EC300CE4FE4 /* Assets.xcassets */; };
 		F3B5407C2BC354CE005514FF /* ScrechKit in Frameworks */ = {isa = PBXBuildFile; productRef = F3B5407B2BC354CE005514FF /* ScrechKit */; };
 		F3B5407F2BC355AE005514FF /* Home View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B5407E2BC355AE005514FF /* Home View.swift */; };
 		F3B540812BC35A12005514FF /* Starred Apps.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B540802BC35A12005514FF /* Starred Apps.swift */; };
@@ -33,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		F336780F2BC5EF5C0083E21C /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		F34345C92DDF05100033A7DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F371A52F2C2DB09B006BDF0D /* macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = macOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F371A53A2C2DB09C006BDF0D /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		F371A5492C2DB137006BDF0D /* App List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App List.swift"; sourceTree = "<group>"; };
@@ -74,6 +75,7 @@
 			children = (
 				F371A5502C2DBCAE006BDF0D /* macOS.plist */,
 				F371A53A2C2DB09C006BDF0D /* macOS.entitlements */,
+				F34345C92DDF05100033A7DE /* Assets.xcassets */,
 				F371A5492C2DB137006BDF0D /* App List.swift */,
 				F371A54C2C2DB146006BDF0D /* App Card.swift */,
 			);
@@ -125,8 +127,8 @@
 				F336780F2BC5EF5C0083E21C /* Localizable.xcstrings */,
 				F3B5407E2BC355AE005514FF /* Home View.swift */,
 				F3B540802BC35A12005514FF /* Starred Apps.swift */,
-				F3E5932C2BB79F7000CE4FE4 /* App List.swift */,
 				F3E5932E2BB79FBA00CE4FE4 /* VM.swift */,
+				F3E5932C2BB79F7000CE4FE4 /* App List.swift */,
 				F3E593372BB8045F00CE4FE4 /* App Card.swift */,
 				F3E593322BB7A46600CE4FE4 /* Model.swift */,
 				F3E593302BB7A0B400CE4FE4 /* Region.swift */,
@@ -218,7 +220,7 @@
 		F371A52D2C2DB09B006BDF0D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			files = (
-				F371A54F2C2DB286006BDF0D /* Assets.xcassets in Resources */,
+				F34345CA2DDF05100033A7DE /* Assets.xcassets in Resources */,
 			);
 		};
 		F3E593142BB79EC300CE4FE4 /* Resources */ = {
