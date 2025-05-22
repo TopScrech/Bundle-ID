@@ -61,8 +61,10 @@ struct AppCard: View {
             
             Divider()
             
-            Link(destination: URL(string: app.trackViewUrl)!) {
-                Label("App Store", systemImage: "link")
+            if let url = URL(string: app.trackViewUrl) {
+                Link(destination: url) {
+                    Label("App Store", systemImage: "link")
+                }
             }
             
             ShareLink(item: app.trackViewUrl)
