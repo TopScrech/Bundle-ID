@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		F33678102BC5EF5C0083E21C /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = F336780F2BC5EF5C0083E21C /* Localizable.xcstrings */; };
 		F34345CA2DDF05100033A7DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F34345C92DDF05100033A7DE /* Assets.xcassets */; };
+		F34345CD2DDF062F0033A7DE /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = F34345CC2DDF062F0033A7DE /* Kingfisher */; };
+		F34345CF2DDF06D40033A7DE /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = F34345CE2DDF06D40033A7DE /* Kingfisher */; };
+		F34345D02DDF06D90033A7DE /* App Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E593372BB8045F00CE4FE4 /* App Card.swift */; };
 		F371A53E2C2DB0EE006BDF0D /* Bundle ID.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E593192BB79EC300CE4FE4 /* Bundle ID.swift */; };
 		F371A53F2C2DB0F8006BDF0D /* VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E5932E2BB79FBA00CE4FE4 /* VM.swift */; };
 		F371A5422C2DB0F8006BDF0D /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E593302BB7A0B400CE4FE4 /* Region.swift */; };
@@ -17,7 +20,6 @@
 		F371A5452C2DB0F8006BDF0D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E593322BB7A46600CE4FE4 /* Model.swift */; };
 		F371A5482C2DB11E006BDF0D /* ScrechKit in Frameworks */ = {isa = PBXBuildFile; productRef = F371A5472C2DB11E006BDF0D /* ScrechKit */; };
 		F371A54A2C2DB137006BDF0D /* App List.swift in Sources */ = {isa = PBXBuildFile; fileRef = F371A5492C2DB137006BDF0D /* App List.swift */; };
-		F371A54D2C2DB146006BDF0D /* App Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = F371A54C2C2DB146006BDF0D /* App Card.swift */; };
 		F3B5407C2BC354CE005514FF /* ScrechKit in Frameworks */ = {isa = PBXBuildFile; productRef = F3B5407B2BC354CE005514FF /* ScrechKit */; };
 		F3B5407F2BC355AE005514FF /* Home View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B5407E2BC355AE005514FF /* Home View.swift */; };
 		F3B540812BC35A12005514FF /* Starred Apps.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B540802BC35A12005514FF /* Starred Apps.swift */; };
@@ -37,7 +39,6 @@
 		F371A52F2C2DB09B006BDF0D /* macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = macOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F371A53A2C2DB09C006BDF0D /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		F371A5492C2DB137006BDF0D /* App List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App List.swift"; sourceTree = "<group>"; };
-		F371A54C2C2DB146006BDF0D /* App Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App Card.swift"; sourceTree = "<group>"; };
 		F371A5502C2DBCAE006BDF0D /* macOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = macOS.plist; sourceTree = "<group>"; };
 		F3AC0BE22D8265650077AC61 /* iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = iOS.plist; sourceTree = "<group>"; };
 		F3B5407E2BC355AE005514FF /* Home View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home View.swift"; sourceTree = "<group>"; };
@@ -58,12 +59,14 @@
 		F371A52C2C2DB09B006BDF0D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
+				F34345CF2DDF06D40033A7DE /* Kingfisher in Frameworks */,
 				F371A5482C2DB11E006BDF0D /* ScrechKit in Frameworks */,
 			);
 		};
 		F3E593132BB79EC300CE4FE4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
+				F34345CD2DDF062F0033A7DE /* Kingfisher in Frameworks */,
 				F3B5407C2BC354CE005514FF /* ScrechKit in Frameworks */,
 			);
 		};
@@ -77,7 +80,6 @@
 				F371A53A2C2DB09C006BDF0D /* macOS.entitlements */,
 				F34345C92DDF05100033A7DE /* Assets.xcassets */,
 				F371A5492C2DB137006BDF0D /* App List.swift */,
-				F371A54C2C2DB146006BDF0D /* App Card.swift */,
 			);
 			path = "Bundle ID Mac";
 			sourceTree = "<group>";
@@ -152,6 +154,7 @@
 			name = macOS;
 			packageProductDependencies = (
 				F371A5472C2DB11E006BDF0D /* ScrechKit */,
+				F34345CE2DDF06D40033A7DE /* Kingfisher */,
 			);
 			productName = "Bundle ID Mac";
 			productReference = F371A52F2C2DB09B006BDF0D /* macOS.app */;
@@ -170,6 +173,7 @@
 			name = iOS;
 			packageProductDependencies = (
 				F3B5407B2BC354CE005514FF /* ScrechKit */,
+				F34345CC2DDF062F0033A7DE /* Kingfisher */,
 			);
 			productName = "Bundle ID";
 			productReference = F3E593162BB79EC300CE4FE4 /* iOS.app */;
@@ -204,6 +208,7 @@
 			mainGroup = F3E5930D2BB79EC300CE4FE4;
 			packageReferences = (
 				F3B5407A2BC354CE005514FF /* XCRemoteSwiftPackageReference "ScrechKit" */,
+				F34345CB2DDF062F0033A7DE /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			preferredProjectObjectVersion = 90;
 			productRefGroup = F3E593172BB79EC300CE4FE4 /* Products */;
@@ -241,7 +246,7 @@
 				F371A54A2C2DB137006BDF0D /* App List.swift in Sources */,
 				F371A5422C2DB0F8006BDF0D /* Region.swift in Sources */,
 				F371A5432C2DB0F8006BDF0D /* Starred Apps.swift in Sources */,
-				F371A54D2C2DB146006BDF0D /* App Card.swift in Sources */,
+				F34345D02DDF06D90033A7DE /* App Card.swift in Sources */,
 				F371A5442C2DB0F8006BDF0D /* Home View.swift in Sources */,
 				F371A5452C2DB0F8006BDF0D /* Model.swift in Sources */,
 			);
@@ -563,6 +568,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		F34345CB2DDF062F0033A7DE /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.3.2;
+			};
+		};
 		F3B5407A2BC354CE005514FF /* XCRemoteSwiftPackageReference "ScrechKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/TopScrech/ScrechKit";
@@ -574,6 +587,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		F34345CC2DDF062F0033A7DE /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F34345CB2DDF062F0033A7DE /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		F34345CE2DDF06D40033A7DE /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F34345CB2DDF062F0033A7DE /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		F371A5472C2DB11E006BDF0D /* ScrechKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F3B5407A2BC354CE005514FF /* XCRemoteSwiftPackageReference "ScrechKit" */;
