@@ -8,7 +8,6 @@ struct AppCard: View {
         self.app = app
     }
     
-    @State private var uiImage: UIImage?
     @State private var skOverlay = false
     
     var body: some View {
@@ -37,24 +36,27 @@ struct AppCard: View {
             }
             .foregroundStyle(.foreground)
         }
+#if !os(macOS)
         .appStoreOverlay($skOverlay, id: app.trackId)
+#endif
         .contextMenu {
+#if !os(macOS)
             Button {
                 skOverlay = true
             } label: {
                 Label("Download", systemImage: "plus.app")
             }
-            
+#endif
             Divider()
             
             Button {
-                UIPasteboard.general.string = app.bundleID
+                copy(app.bundleID)
             } label: {
                 Label("Copy Bundle ID", systemImage: "doc.on.doc")
             }
             
             Button {
-                UIPasteboard.general.string = String(app.trackId)
+                copy(String(app.trackId))
             } label: {
                 Label("Copy App ID", systemImage: "doc.on.doc")
             }
@@ -70,6 +72,14 @@ struct AppCard: View {
             ShareLink(item: app.trackViewUrl)
         }
     }
+}
+
+func copy(_ string: String) {
+#if os(macOS)
+    NSPasteboard.general.setString(string, forType: .string)
+#else
+    UIPasteboard.general.string = string
+#endif
 }
 
 //#Preview {
