@@ -14,6 +14,7 @@ struct AppList: View {
         List {
             HStack {
                 TextField("Name", text: $term)
+                    .textFieldStyle(.roundedBorder)
                 
                 if !term.isEmpty {
                     Button {

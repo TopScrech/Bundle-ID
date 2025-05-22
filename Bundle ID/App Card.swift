@@ -74,6 +74,7 @@ struct AppCard: View {
     }
 }
 
+#warning("Move to ScrechKit")
 func copy(_ string: String) {
 #if os(macOS)
     NSPasteboard.general.setString(string, forType: .string)
