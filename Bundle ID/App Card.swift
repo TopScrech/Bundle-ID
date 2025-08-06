@@ -1,4 +1,4 @@
-import SwiftUI
+import ScrechKit
 import Kingfisher
 
 struct AppCard: View {
@@ -59,13 +59,13 @@ struct AppCard: View {
             Divider()
             
             Button {
-                copy(app.bundleID)
+                Pasteboard.copy(app.bundleID)
             } label: {
                 Label("Copy Bundle ID", systemImage: "doc.on.doc")
             }
             
             Button {
-                copy(String(app.trackId))
+                Pasteboard.copy(String(app.trackId))
             } label: {
                 Label("Copy App ID", systemImage: "doc.on.doc")
             }
@@ -97,15 +97,6 @@ struct AppCard: View {
         
         return fileUrl
     }
-}
-
-#warning("Move to ScrechKit")
-func copy(_ string: String) {
-#if os(macOS)
-    NSPasteboard.general.setString(string, forType: .string)
-#else
-    UIPasteboard.general.string = string
-#endif
 }
 
 //#Preview {
