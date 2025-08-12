@@ -66,10 +66,24 @@
 
     },
     "Name" : {
-
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Naam"
+          }
+        }
+      }
     },
     "Region" : {
-
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Regio"
+          }
+        }
+      }
     }
   },
   "version" : "1.1"
