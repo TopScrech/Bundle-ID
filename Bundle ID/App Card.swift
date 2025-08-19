@@ -1,5 +1,6 @@
 import ScrechKit
 import Kingfisher
+import Photos
 
 struct AppCard: View {
     private let app: Result
@@ -29,9 +30,8 @@ struct AppCard: View {
                         .rounded()
                     
                     Text(app.bundleID)
-                        .caption()
+                        .caption(design: .monospaced)
                         .secondary()
-                        .monospaced()
                 }
             }
             .foregroundStyle(.foreground)
@@ -41,33 +41,28 @@ struct AppCard: View {
 #endif
         .contextMenu {
 #if !os(macOS)
-            Button {
+            Button("Download", systemImage: "plus.app") {
                 skOverlay = true
-            } label: {
-                Label("Download", systemImage: "plus.app")
             }
 #endif
-#if os(macOS)
-            Button {
+            Button("Donwload app icon", systemImage: "square.and.arrow.down") {
                 Task {
-                    try await downloadFile(app.artworkUrl512)
-                }
-            } label: {
-                Label("Donwload app icon", systemImage: "square.and.arrow.down")
-            }
+#if os(macOS)
+                    try await downloadAndSaveToDownloads(app.artworkUrl512)
+#else
+                    try await downloadAndSaveImageToPhotos(app.artworkUrl512)
 #endif
+                }
+            }
+            
             Divider()
             
-            Button {
+            Button("Copy Bundle ID", systemImage: "doc.on.doc") {
                 Pasteboard.copy(app.bundleID)
-            } label: {
-                Label("Copy Bundle ID", systemImage: "doc.on.doc")
             }
             
-            Button {
+            Button("Copy App ID", systemImage: "doc.on.doc") {
                 Pasteboard.copy(String(app.trackId))
-            } label: {
-                Label("Copy App ID", systemImage: "doc.on.doc")
             }
             
             Divider()
@@ -82,8 +77,7 @@ struct AppCard: View {
         }
     }
     
-    @available(macOS 10.10, *)
-    func downloadFile(_ urlString: String) async throws -> URL {
+    private func downloadAndSaveToDownloads(_ urlString: String) async throws -> URL {
         guard let url = URL(string: urlString) else {
             throw URLError(.badURL)
         }
@@ -96,6 +90,39 @@ struct AppCard: View {
         try data.write(to: fileUrl)
         
         return fileUrl
+    }
+    
+    func downloadAndSaveImageToPhotos(_ urlString: String) async throws {
+        guard let url = URL(string: urlString) else {
+            throw URLError(.badURL)
+        }
+        
+        let (tempFileURL, _) = try await URLSession.shared.download(from: url)
+        let data = try Data(contentsOf: tempFileURL)
+        
+        guard let image = UIImage(data: data) else {
+            throw URLError(.cannotDecodeRawData)
+        }
+        
+        let status = await PHPhotoLibrary.requestAuthorization(for: .addOnly)
+        
+        guard status == .authorized || status == .limited else {
+            throw URLError(.noPermissionsToReadFile)
+        }
+        
+        try await withCheckedThrowingContinuation { (continuation: CheckedContinuation<Void, Error>) in
+            PHPhotoLibrary.shared().performChanges {
+                PHAssetChangeRequest.creationRequestForAsset(from: image)
+            } completionHandler: { success, error in
+                if let error {
+                    continuation.resume(throwing: error)
+                } else if success {
+                    continuation.resume(returning: ())
+                } else {
+                    continuation.resume(throwing: URLError(.unknown))
+                }
+            }
+        }
     }
 }
 
