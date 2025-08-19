@@ -1,4 +1,4 @@
-import SwiftUI
+import ScrechKit
 
 struct AppList: View {
     private var vm = VM()
@@ -10,18 +10,21 @@ struct AppList: View {
         term + country
     }
     
+    @FocusState private var isFocused
+    
     var body: some View {
         List {
             HStack {
                 TextField("Name", text: $term)
+                    .focused($isFocused)
                 
                 if !term.isEmpty {
-                    Button {
+                    SFButton("delete.left") {
                         term = ""
-                    } label: {
-                        Image(systemName: "delete.left")
-                            .tint(.red)
+                        isFocused = true
                     }
+                    .title3()
+                    .tint(.red)
                 }
             }
             
@@ -67,4 +70,5 @@ struct AppList: View {
 
 #Preview {
     AppList()
+        .darkSchemePreferred()
 }
