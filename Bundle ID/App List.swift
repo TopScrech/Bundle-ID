@@ -54,16 +54,10 @@ struct AppList: View {
         }
         .scrollIndicators(.never)
         .refreshableTask {
-            vm.fetch(
-                term: term,
-                country: country
-            )
+            vm.fetch(term: term, country: country)
         }
         .onChange(of: searchRules) {
-            vm.fetch(
-                term: term,
-                country: country
-            )
+            vm.fetch(term: term, country: country)
         }
     }
 }
