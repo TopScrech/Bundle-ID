@@ -100,7 +100,7 @@ struct AppCard: View {
         let (tempFileURL, _) = try await URLSession.shared.download(from: url)
         let data = try Data(contentsOf: tempFileURL)
         
-        guard let image = UIImage(data: data) else {
+        guard let image = UniversalImage(data: data) else {
             throw URLError(.cannotDecodeRawData)
         }
         
