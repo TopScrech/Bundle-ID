@@ -30,11 +30,11 @@
 		F3D8591D2F451E1A00B2A3F7 /* Exceptions for "Bundle ID" folder in "macOS" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				"App List.swift",
+				AppList.swift,
 				Assets.xcassets,
 				iOS.plist,
 				Localizable.xcstrings,
-				"Nav/Nav Container.swift",
+				Nav/NavContainer.swift,
 			);
 			target = F371A52E2C2DB09B006BDF0D /* macOS */;
 		};
