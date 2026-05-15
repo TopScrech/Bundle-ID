@@ -51,6 +51,7 @@ struct AppList: View {
             }
         }
         .scrollIndicators(.never)
+        .frame(minWidth: 360, minHeight: 520)
         .refreshableTask {
             vm.fetch(
                 term: term,
