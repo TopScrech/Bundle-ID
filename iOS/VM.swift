@@ -24,11 +24,9 @@ final class VM {
             return
         }
         
-        let request = URLRequest(
-            url: url
-        )
+        let request = URLRequest(url: url)
         
-        URLSession.shared.dataTask(with: request) { data, response, error in
+        URLSession.shared.dataTask(with: request) { data, _, _ in
             guard let data else {
                 print("No data received")
                 return
@@ -41,8 +39,9 @@ final class VM {
             }
             
             // Find the index of the first '{' and the last '}'
-            guard let firstBraceIndex = jsonString.firstIndex(of: "{"),
-                  let lastBraceIndex = jsonString.lastIndex(of: "}")
+            guard
+                let firstBraceIndex = jsonString.firstIndex(of: "{"),
+                let lastBraceIndex = jsonString.lastIndex(of: "}")
             else {
                 print("Failed to find braces in JSON string")
                 self.data = nil
@@ -53,17 +52,19 @@ final class VM {
             let cleanJsonString = jsonString[firstBraceIndex...lastBraceIndex]
             
             // Convert the cleaned JSON string back to Data
-            guard let cleanJsonData = cleanJsonString.data(using: .utf8) else {
+            guard
+                let cleanJsonData = cleanJsonString.data(using: .utf8)
+            else {
                 print("Failed to convert cleaned JSON string to data")
                 return
             }
             
-            // Decode the cleaned JSON data
+            // Decode cleaned JSON
             do {
                 let welcome = try JSONDecoder().decode(Welcome.self, from: cleanJsonData)
                 self.data = welcome
             } catch {
-                print("Decoder error: \(error.localizedDescription)")
+                print("Decoder error:", error.localizedDescription)
                 self.data = nil
             }
         }

@@ -1,4 +1,4 @@
-import SwiftUI
+import ScrechKit
 
 struct AppList: View {
     private var vm = VM()
@@ -10,32 +10,35 @@ struct AppList: View {
         term + country
     }
     
+    @FocusState private var isFocused
+    
     var body: some View {
         List {
             HStack {
                 TextField("Name", text: $term)
+                    .focused($isFocused)
                 
                 if !term.isEmpty {
-                    Button {
+                    SFButton("delete.left") {
                         term = ""
-                    } label: {
-                        Image(systemName: "delete.left")
-                            .tint(.red)
+                        isFocused = true
                     }
+                    .title3()
+                    .tint(.red)
                 }
             }
             
             Picker("Region", selection: $country) {
                 Section("Default") {
                     ForEach(Region.defaultCases, id: \.self) { country in
-                        Text("\(country) - \(country.rawValue)")
+                        Text(verbatim: String(describing: country) + " - " + country.rawValue)
                             .tag("\(country)")
                     }
                 }
                 
                 Section("All Countries") {
                     ForEach(Region.allCases, id: \.self) { country in
-                        Text("\(country) - \(country.rawValue)")
+                        Text(verbatim: String(describing: country) + " - " + country.rawValue)
                             .tag("\(country)")
                     }
                 }
@@ -50,21 +53,19 @@ struct AppList: View {
             }
         }
         .scrollIndicators(.never)
-        .refreshableTask {
-            vm.fetch(
-                term: term,
-                country: country
-            )
+        .refreshable {
+            vm.fetch(term: term, country: country)
+        }
+        .onAppear {
+            vm.fetch(term: term, country: country)
         }
         .onChange(of: searchRules) {
-            vm.fetch(
-                term: term,
-                country: country
-            )
+            vm.fetch(term: term, country: country)
         }
     }
 }
 
 #Preview {
     AppList()
+        .darkSchemePreferred()
 }

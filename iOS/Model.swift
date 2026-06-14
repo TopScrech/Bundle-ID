@@ -6,21 +6,23 @@ struct Welcome: Codable {
 }
 
 struct Result: Codable {
+    let artworkUrl512: String
+    let bundleID: String
+    let trackId: Int
+    let trackName: String
+    let trackViewUrl: String
+    let artistName: String
     //    let advisories: [String]
     //    let features: [Feature]
     //    let isGameCenterEnabled: Bool
     //    let screenshotUrls, ipadScreenshotUrls: [String]
     //    let appletvScreenshotUrls: [JSONAny]
-    let artworkUrl60, artworkUrl512, artworkUrl100: String
     //    let artistViewURL: String
     //    //    let kind: Kind // MARK: Doesnt work
     //    let supportedDevices: [String]
     //    let currency: Currency
     //    //    let currentVersionReleaseDate: Date  // MARK: Doesnt work
     //    let releaseNotes: String
-    let bundleID: String
-    let trackId: Int
-    let trackName: String
     //    let description: String
     //    let isVppDeviceBasedLicensingEnabled: Bool
     //    let sellerName: String
@@ -36,30 +38,30 @@ struct Result: Codable {
     //    let formattedPrice: FormattedPrice
     //    let contentAdvisoryRating: String
     //    let userRatingCountForCurrentVersion: Int
-    let trackViewUrl: String
     //    let trackContentRating, version: String
     //    let wrapperType: Kind
     //    let genres: [String]
     //    let price, artistID: Int
-    let artistName: String
     //    let userRatingCount: Int
     //    let sellerURL: String?
     
     enum CodingKeys: String, CodingKey {
+        case artworkUrl512,
+             bundleID = "bundleId",
+             trackId,
+             trackName,
+             trackViewUrl,
+             artistName
         //        case advisories
         //        case features
         //        case isGameCenterEnabled
         //        case screenshotUrls, ipadScreenshotUrls, appletvScreenshotUrls
-        case artworkUrl60, artworkUrl512, artworkUrl100
         //        case artistViewURL = "artistViewUrl"
         //        //        case kind
         //        case supportedDevices
         //        case currency
         //        //        case currentVersionReleaseDate
         //        case releaseNotes
-        case bundleID = "bundleId"
-        case trackId
-        case trackName
         //        case description, isVppDeviceBasedLicensingEnabled
         //        case sellerName
         //        //        case releaseDate
@@ -68,10 +70,8 @@ struct Result: Codable {
         //        case genreIDS = "genreIds"
         //        case minimumOSVersion = "minimumOsVersion"
         //        case averageUserRatingForCurrentVersion, averageUserRating, trackCensoredName, languageCodesISO2A, fileSizeBytes, formattedPrice, contentAdvisoryRating, userRatingCountForCurrentVersion
-        case trackViewUrl
         //        case trackContentRating, version, wrapperType, genres, price
         //        case artistID = "artistId"
-        case artistName
         //        case userRatingCount
         //        case sellerURL = "sellerUrl"
     }
@@ -149,8 +149,8 @@ enum Currency: String, Codable {
 }
 
 enum Feature: String, Codable {
-    case gameCenter = "gameCenter"
-    case iosUniversal = "iosUniversal"
+    case gameCenter = "gameCenter",
+         iosUniversal = "iosUniversal"
 }
 
 enum FormattedPrice: String, Codable {

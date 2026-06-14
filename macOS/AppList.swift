@@ -14,6 +14,7 @@ struct AppList: View {
         List {
             HStack {
                 TextField("Name", text: $term)
+                    .textFieldStyle(.roundedBorder)
                 
                 if !term.isEmpty {
                     Button {
@@ -28,14 +29,14 @@ struct AppList: View {
             Picker("Region", selection: $country) {
                 Section("Default") {
                     ForEach(Region.defaultCases, id: \.self) { country in
-                        Text("\(country) - \(country.rawValue)")
+                        Text(verbatim: String(describing: country) + " - " + country.rawValue)
                             .tag("\(country)")
                     }
                 }
                 
                 Section("All Countries") {
                     ForEach(Region.allCases, id: \.self) { country in
-                        Text("\(country) - \(country.rawValue)")
+                        Text(verbatim: String(describing: country) + " - " + country.rawValue)
                             .tag("\(country)")
                     }
                 }
@@ -50,6 +51,7 @@ struct AppList: View {
             }
         }
         .scrollIndicators(.never)
+        .frame(minWidth: 360, minHeight: 520)
         .refreshableTask {
             vm.fetch(
                 term: term,
