@@ -47,11 +47,15 @@ struct AppCard: View {
 #endif
             Button("Donwload app icon", systemImage: "square.and.arrow.down") {
                 Task {
+                    do {
 #if os(macOS)
-                    try await downloadAndSaveToDownloads(app.artworkUrl512)
+                        try await downloadAndSaveToDownloads(app.artworkUrl512)
 #else
-                    try await downloadAndSaveImageToPhotos(app.artworkUrl512)
+                        try await downloadAndSaveImageToPhotos(app.artworkUrl512)
 #endif
+                    } catch {
+                        print("Failed to download app icon:", error.localizedDescription)
+                    }
                 }
             }
             
