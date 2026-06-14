@@ -49,7 +49,7 @@ struct AppCard: View {
                 Task {
                     do {
 #if os(macOS)
-                        try await downloadAndSaveToDownloads(app.artworkUrl512)
+                        _ = try await downloadAndSaveToDownloads(app.artworkUrl512)
 #else
                         try await downloadAndSaveImageToPhotos(app.artworkUrl512)
 #endif
