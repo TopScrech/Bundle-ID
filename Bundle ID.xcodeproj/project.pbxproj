@@ -14,8 +14,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F319F1212FDF104900654D04 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		F319F1222FDF104900654D04 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F371A52F2C2DB09B006BDF0D /* macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = macOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3D859262F451E2C00B2A3F7 /* UNLICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = UNLICENSE.txt; sourceTree = "<group>"; };
 		F3E593162BB79EC300CE4FE4 /* iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -96,9 +97,10 @@
 		F3E5930D2BB79EC300CE4FE4 = {
 			isa = PBXGroup;
 			children = (
-				F3D859262F451E2C00B2A3F7 /* UNLICENSE.txt */,
+				F319F1222FDF104900654D04 /* README.md */,
 				F3D859032F451E1A00B2A3F7 /* iOS */,
 				F3D859222F451E1D00B2A3F7 /* macOS */,
+				F319F1212FDF104900654D04 /* LICENSE */,
 				F3E593172BB79EC300CE4FE4 /* Products */,
 				F371A5462C2DB11E006BDF0D /* Frameworks */,
 			);
