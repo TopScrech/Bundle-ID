@@ -12,6 +12,7 @@ struct Result: Codable {
     let trackName: String
     let trackViewUrl: String
     let artistName: String
+    let minimumOSVersion: String?
     //    let advisories: [String]
     //    let features: [Feature]
     //    let isGameCenterEnabled: Bool
@@ -51,7 +52,8 @@ struct Result: Codable {
              trackId,
              trackName,
              trackViewUrl,
-             artistName
+             artistName,
+             minimumOSVersion = "minimumOsVersion"
         //        case advisories
         //        case features
         //        case isGameCenterEnabled

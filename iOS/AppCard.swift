@@ -12,8 +12,8 @@ struct AppCard: View {
     @State private var skOverlay = false
     
     var body: some View {
-        Button {
-            skOverlay = true
+        NavigationLink {
+            AppDetailsView(app)
         } label: {
             HStack {
                 KFImage(URL(string: app.artworkUrl512))

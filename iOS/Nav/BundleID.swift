@@ -20,7 +20,9 @@ struct BundleID: App {
     var body: some Scene {
 #if os(macOS)
         MenuBarExtra("Bundle ID", systemImage: "magnifyingglass") {
-            AppList()
+            NavigationStack {
+                AppList()
+            }
         }
         .menuBarExtraStyle(.window)
 #else
