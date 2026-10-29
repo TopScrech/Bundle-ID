@@ -19,7 +19,7 @@ struct AppCard: View {
                 KFImage(URL(string: app.artworkUrl512))
                     .resizable()
                     .fade(duration: 0.25)
-                    .frame(width: 64, height: 64)
+                    .frame(64)
                     .clipShape(.rect(cornerRadius: 16))
                 
                 VStack(alignment: .leading) {
@@ -88,12 +88,12 @@ struct AppCard: View {
         
         let (data, _) = try await URLSession.shared.data(from: url)
         
-        let documentsUrl = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask).first!
-        let fileUrl = documentsUrl.appendingPathComponent(url.lastPathComponent)
+        let documentsURL = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask).first!
+        let fileURL = documentsURL.appendingPathComponent(url.lastPathComponent)
         
-        try data.write(to: fileUrl)
+        try data.write(to: fileURL)
         
-        return fileUrl
+        return fileURL
     }
     
     func downloadAndSaveImageToPhotos(_ urlString: String) async throws {
