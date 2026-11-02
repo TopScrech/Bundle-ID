@@ -15,6 +15,20 @@
   "packages": [
     {
       "kind": "remote",
+      "repository": "https://github.com/TopScrech/swift-update.git",
+      "version": {
+        "up-to-next-major-version": "1.1.2"
+      }
+    },
+    {
+      "kind": "remote",
+      "repository": "https://github.com/SimplyDanny/SwiftLintPlugins",
+      "version": {
+        "up-to-next-major-version": "0.65.1"
+      }
+    },
+    {
+      "kind": "remote",
       "repository": "https://github.com/TopScrech/ScrechKit",
       "version": {
         "up-to-next-major-version": "1.0.0",
@@ -28,6 +42,9 @@
     },
   ],
   "files": [
+    {
+      "path": ".swiftlint.yml"
+    },
     { "path": "README.md" },
     { "path": "AGENTS.md" },
     {
@@ -72,6 +89,12 @@
       "kind": "group",
       "name": "Products",
       "children": [
+        {
+          "path": "<PRODUCTS>/Package Update Tools.bundle",
+          "id": "0A913118479C5B24187DFB18",
+          "type": "wrapper.cfbundle",
+          "index": false
+        },
         { "path": "<PRODUCTS>/iOS.app", "id": "F3E593162BB79EC300CE4FE4", "type": "wrapper.application", "index": false },
         { "path": "<PRODUCTS>/macOS.app", "id": "F371A52F2C2DB09B006BDF0D", "type": "wrapper.application", "index": false },
       ],
@@ -80,6 +103,62 @@
   ],
   "targets": [
     {
+      "name": "Package Update Tools",
+      "id": "1D6B1F4AEA8BB0698C09D506",
+      "product": "id:0A913118479C5B24187DFB18",
+      "build-phases": [],
+      "product-type": "bundle",
+      "dependencies": [
+        {
+          "kind": "package",
+          "package": "swift-update",
+          "product-name": "swift-update"
+        }
+      ],
+      "build-settings": {
+        "SDKROOT": "macosx",
+        "SUPPORTED_PLATFORMS": "macosx",
+        "MACOSX_DEPLOYMENT_TARGET": "13.0",
+        "CODE_SIGNING_ALLOWED": "NO",
+        "GENERATE_INFOPLIST_FILE": "YES",
+        "PRODUCT_BUNDLE_IDENTIFIER": "dev.topscrech.Bundle-ID.PackageUpdateTools",
+        "PRODUCT_NAME": "Package Update Tools",
+        "SKIP_INSTALL": "YES"
+      }
+    },
+    {
+      "name": "Check Package Updates",
+      "id": "818DBECB1B7E06D12B6379BD",
+      "kind": "aggregate",
+      "dependencies": [
+        "Package Update Tools"
+      ],
+      "build-phases": [
+        {
+          "kind": "script",
+          "name": "Check Package Updates",
+          "run-on-every-build": true,
+          "shell": "/bin/sh",
+          "script": "\"$BUILT_PRODUCTS_DIR/swift-update\" --xcode --path \"$PROJECT_FILE_PATH\" || true"
+        }
+      ],
+      "build-settings": {
+        "ENABLE_USER_SCRIPT_SANDBOXING": "NO",
+        "SDKROOT": "macosx",
+        "SKIP_INSTALL": "YES",
+        "SUPPORTED_PLATFORMS": "macosx"
+      }
+    },
+    {
+      "dependencies": [
+        "Check Package Updates",
+        {
+          "kind": "package",
+          "package": "SwiftLintPlugins",
+          "product-name": "SwiftLintBuildToolPlugin",
+          "product-type": "build-tool-plugin"
+        }
+      ],
       "name": "iOS",
       "id": "F3E593152BB79EC300CE4FE4",
       "product": "Products/iOS.app",
@@ -144,6 +223,15 @@
         "XROS_DEPLOYMENT_TARGET": "1",
       },
     }, {
+      "dependencies": [
+        "Check Package Updates",
+        {
+          "kind": "package",
+          "package": "SwiftLintPlugins",
+          "product-name": "SwiftLintBuildToolPlugin",
+          "product-type": "build-tool-plugin"
+        }
+      ],
       "name": "macOS",
       "id": "F371A52E2C2DB09B006BDF0D",
       "product": "Products/macOS.app",
